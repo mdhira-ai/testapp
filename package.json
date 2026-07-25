@@ -1,0 +1,50 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "this is testapp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch:css": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "build": "electron-builder --win",
+    "publish": "electron-builder --win --publish always"
+  },
+  "repository": {
+    "url": ""
+  },
+  "build": {
+    "appId": "com.habib.testapp",
+    "productName": "testapp",
+    "files": [
+      "**/*",
+      "!node_modules/.cache"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "mdhira-ai",
+      "repo": ""
+    }
+  },
+  "keywords": [],
+  "author": "habib",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
