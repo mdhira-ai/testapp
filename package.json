@@ -10,7 +10,7 @@
     "publish": "electron-builder --win --publish always"
   },
   "repository": {
-    "url": ""
+    "url": "https://github.com/mdhira-ai/testapp"
   },
   "build": {
     "appId": "com.habib.testapp",
@@ -32,7 +32,7 @@
     "publish": {
       "provider": "github",
       "owner": "mdhira-ai",
-      "repo": ""
+      "repo": "testapp"
     }
   },
   "keywords": [],
@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
+    "electron-log": "^5.4.4",
+    "electron-updater": "^6.8.9",
     "tailwindcss": "^4.3.3"
   }
 }
